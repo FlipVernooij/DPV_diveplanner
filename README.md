@@ -1,3 +1,12 @@
+# Intro
+
+While doing my GUE DPV cave course we learned alot about gas-planning.
+This becuase both gas and burntime calculations are quite important to do correctly when taking a DPV into a cave.
+As part of the course we got an Excell sheet presented that tried to calculate a proper diveplan according the the amount of gas you would carry.
+At a first glance this seemed to work kint of, but when looking into the results and do some control calculations I found it did not work correctly at various places.
+
+So to actually be able to get an idea about the situations we will be prepared for,.. I wrote this program.
+
 # DPV_diveplanner
 Application to plan your DPV dive according too GUE standards (C++, Qt5.8)
 
