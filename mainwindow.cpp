@@ -199,9 +199,19 @@ void MainWindow::on_input_dpv_in_type_currentIndexChanged(int index)
 {
     if(index == 0){
         ui->input_dpv_triggertime->setEnabled(true);
+        ui->label_dpv_triggertime->setEnabled(true);
+        ui->label_dpv_triggertime_suffix->setEnabled(true);
+
+        ui->label_dpv_triggerdistance->setEnabled(false);
         ui->input_dpv_triggerdistance->setEnabled(false);
+        ui->label_dpv_triggerdistance_suffix->setEnabled(false);
     }else{
         ui->input_dpv_triggertime->setEnabled(false);
+        ui->label_dpv_triggertime->setEnabled(false);
+        ui->label_dpv_triggertime_suffix->setEnabled(false);
+
+        ui->label_dpv_triggerdistance->setEnabled(true);
         ui->input_dpv_triggerdistance->setEnabled(true);
+        ui->label_dpv_triggerdistance_suffix->setEnabled(true);
     }
 }

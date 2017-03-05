@@ -37,7 +37,7 @@ public:
     QFrame *frame;
     QLabel *label_gasSupply;
     QFrame *frame_doubles;
-    QWidget *widget;
+    QWidget *layoutWidget_7;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_9;
     QHBoxLayout *horizontalLayout_3;
@@ -53,7 +53,7 @@ public:
     QSpinBox *input_usable_doubles;
     QLabel *label_usable_doubles_suffix;
     QFrame *frame_stages;
-    QGridLayout *gridLayout_3;
+    QWidget *widget;
     QVBoxLayout *verticalLayout_3;
     QLabel *label_header_stages;
     QHBoxLayout *horizontalLayout_6;
@@ -183,7 +183,7 @@ public:
     QWidget *tab_about;
     QTextBrowser *text_disclaimer;
     QFrame *frame_2;
-    QWidget *widget1;
+    QWidget *layoutWidget_5;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_30;
     QLabel *label_4;
@@ -206,7 +206,7 @@ public:
     QLabel *label_15;
     QLabel *label_20;
     QFrame *frame_3;
-    QWidget *layoutWidget;
+    QWidget *layoutWidget_51;
     QVBoxLayout *verticalLayout_8;
     QHBoxLayout *horizontalLayout_35;
     QLabel *label_11;
@@ -243,6 +243,7 @@ public:
         QIcon icon;
         icon.addFile(QStringLiteral(":/icons/gue_logo.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
+        MainWindow->setUnifiedTitleAndToolBarOnMac(false);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
@@ -256,7 +257,7 @@ public:
         tab_properties->setObjectName(QStringLiteral("tab_properties"));
         frame = new QFrame(tab_properties);
         frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(10, 240, 681, 231));
+        frame->setGeometry(QRect(10, 210, 681, 261));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         label_gasSupply = new QLabel(frame);
@@ -268,17 +269,18 @@ public:
         label_gasSupply->setFont(font);
         frame_doubles = new QFrame(frame);
         frame_doubles->setObjectName(QStringLiteral("frame_doubles"));
-        frame_doubles->setGeometry(QRect(10, 30, 321, 181));
+        frame_doubles->setGeometry(QRect(10, 30, 321, 211));
         frame_doubles->setFrameShape(QFrame::StyledPanel);
         frame_doubles->setFrameShadow(QFrame::Raised);
-        widget = new QWidget(frame_doubles);
-        widget->setObjectName(QStringLiteral("widget"));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget_7 = new QWidget(frame_doubles);
+        layoutWidget_7->setObjectName(QStringLiteral("layoutWidget_7"));
+        layoutWidget_7->setGeometry(QRect(10, 10, 301, 124));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget_7);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_9 = new QLabel(widget);
+        label_9 = new QLabel(layoutWidget_7);
         label_9->setObjectName(QStringLiteral("label_9"));
         label_9->setFont(font);
 
@@ -287,12 +289,12 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_cylindersize_doubles = new QLabel(widget);
+        label_cylindersize_doubles = new QLabel(layoutWidget_7);
         label_cylindersize_doubles->setObjectName(QStringLiteral("label_cylindersize_doubles"));
 
         horizontalLayout_3->addWidget(label_cylindersize_doubles);
 
-        input_cylindersize_doubles = new QSpinBox(widget);
+        input_cylindersize_doubles = new QSpinBox(layoutWidget_7);
         input_cylindersize_doubles->setObjectName(QStringLiteral("input_cylindersize_doubles"));
         sizePolicy.setHeightForWidth(input_cylindersize_doubles->sizePolicy().hasHeightForWidth());
         input_cylindersize_doubles->setSizePolicy(sizePolicy);
@@ -304,7 +306,7 @@ public:
 
         horizontalLayout_3->addWidget(input_cylindersize_doubles);
 
-        label_cylindersize_doubles_suffix = new QLabel(widget);
+        label_cylindersize_doubles_suffix = new QLabel(layoutWidget_7);
         label_cylindersize_doubles_suffix->setObjectName(QStringLiteral("label_cylindersize_doubles_suffix"));
         sizePolicy.setHeightForWidth(label_cylindersize_doubles_suffix->sizePolicy().hasHeightForWidth());
         label_cylindersize_doubles_suffix->setSizePolicy(sizePolicy);
@@ -319,12 +321,12 @@ public:
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        label_pressure_doubles = new QLabel(widget);
+        label_pressure_doubles = new QLabel(layoutWidget_7);
         label_pressure_doubles->setObjectName(QStringLiteral("label_pressure_doubles"));
 
         horizontalLayout_4->addWidget(label_pressure_doubles);
 
-        input_pressure_doubles = new QSpinBox(widget);
+        input_pressure_doubles = new QSpinBox(layoutWidget_7);
         input_pressure_doubles->setObjectName(QStringLiteral("input_pressure_doubles"));
         sizePolicy.setHeightForWidth(input_pressure_doubles->sizePolicy().hasHeightForWidth());
         input_pressure_doubles->setSizePolicy(sizePolicy);
@@ -336,7 +338,7 @@ public:
 
         horizontalLayout_4->addWidget(input_pressure_doubles);
 
-        label_pressure_doubles_suffix = new QLabel(widget);
+        label_pressure_doubles_suffix = new QLabel(layoutWidget_7);
         label_pressure_doubles_suffix->setObjectName(QStringLiteral("label_pressure_doubles_suffix"));
         sizePolicy.setHeightForWidth(label_pressure_doubles_suffix->sizePolicy().hasHeightForWidth());
         label_pressure_doubles_suffix->setSizePolicy(sizePolicy);
@@ -351,12 +353,12 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        label_usable_doubles = new QLabel(widget);
+        label_usable_doubles = new QLabel(layoutWidget_7);
         label_usable_doubles->setObjectName(QStringLiteral("label_usable_doubles"));
 
         horizontalLayout_5->addWidget(label_usable_doubles);
 
-        input_usable_doubles = new QSpinBox(widget);
+        input_usable_doubles = new QSpinBox(layoutWidget_7);
         input_usable_doubles->setObjectName(QStringLiteral("input_usable_doubles"));
         sizePolicy.setHeightForWidth(input_usable_doubles->sizePolicy().hasHeightForWidth());
         input_usable_doubles->setSizePolicy(sizePolicy);
@@ -367,7 +369,7 @@ public:
 
         horizontalLayout_5->addWidget(input_usable_doubles);
 
-        label_usable_doubles_suffix = new QLabel(widget);
+        label_usable_doubles_suffix = new QLabel(layoutWidget_7);
         label_usable_doubles_suffix->setObjectName(QStringLiteral("label_usable_doubles_suffix"));
         sizePolicy.setHeightForWidth(label_usable_doubles_suffix->sizePolicy().hasHeightForWidth());
         label_usable_doubles_suffix->setSizePolicy(sizePolicy);
@@ -381,17 +383,17 @@ public:
 
         frame_stages = new QFrame(frame);
         frame_stages->setObjectName(QStringLiteral("frame_stages"));
-        frame_stages->setGeometry(QRect(350, 30, 321, 186));
+        frame_stages->setGeometry(QRect(350, 30, 321, 211));
         frame_stages->setFrameShape(QFrame::StyledPanel);
         frame_stages->setFrameShadow(QFrame::Raised);
-        gridLayout_3 = new QGridLayout(frame_stages);
-        gridLayout_3->setSpacing(6);
-        gridLayout_3->setContentsMargins(11, 11, 11, 11);
-        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
-        verticalLayout_3 = new QVBoxLayout();
+        widget = new QWidget(frame_stages);
+        widget->setObjectName(QStringLiteral("widget"));
+        verticalLayout_3 = new QVBoxLayout(widget);
         verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        label_header_stages = new QLabel(frame_stages);
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        label_header_stages = new QLabel(widget);
         label_header_stages->setObjectName(QStringLiteral("label_header_stages"));
         label_header_stages->setFont(font);
 
@@ -400,12 +402,12 @@ public:
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(6);
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        label_cylindersize_stages = new QLabel(frame_stages);
+        label_cylindersize_stages = new QLabel(widget);
         label_cylindersize_stages->setObjectName(QStringLiteral("label_cylindersize_stages"));
 
         horizontalLayout_6->addWidget(label_cylindersize_stages);
 
-        input_cylindersize_stages = new QSpinBox(frame_stages);
+        input_cylindersize_stages = new QSpinBox(widget);
         input_cylindersize_stages->setObjectName(QStringLiteral("input_cylindersize_stages"));
         sizePolicy.setHeightForWidth(input_cylindersize_stages->sizePolicy().hasHeightForWidth());
         input_cylindersize_stages->setSizePolicy(sizePolicy);
@@ -417,7 +419,7 @@ public:
 
         horizontalLayout_6->addWidget(input_cylindersize_stages);
 
-        label_cylindersize_stages_suffix = new QLabel(frame_stages);
+        label_cylindersize_stages_suffix = new QLabel(widget);
         label_cylindersize_stages_suffix->setObjectName(QStringLiteral("label_cylindersize_stages_suffix"));
         sizePolicy.setHeightForWidth(label_cylindersize_stages_suffix->sizePolicy().hasHeightForWidth());
         label_cylindersize_stages_suffix->setSizePolicy(sizePolicy);
@@ -432,12 +434,12 @@ public:
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setSpacing(6);
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        label_pressure_stages = new QLabel(frame_stages);
+        label_pressure_stages = new QLabel(widget);
         label_pressure_stages->setObjectName(QStringLiteral("label_pressure_stages"));
 
         horizontalLayout_7->addWidget(label_pressure_stages);
 
-        input_pressure_stages = new QSpinBox(frame_stages);
+        input_pressure_stages = new QSpinBox(widget);
         input_pressure_stages->setObjectName(QStringLiteral("input_pressure_stages"));
         sizePolicy.setHeightForWidth(input_pressure_stages->sizePolicy().hasHeightForWidth());
         input_pressure_stages->setSizePolicy(sizePolicy);
@@ -449,7 +451,7 @@ public:
 
         horizontalLayout_7->addWidget(input_pressure_stages);
 
-        label_pressure_stages_suffix = new QLabel(frame_stages);
+        label_pressure_stages_suffix = new QLabel(widget);
         label_pressure_stages_suffix->setObjectName(QStringLiteral("label_pressure_stages_suffix"));
         sizePolicy.setHeightForWidth(label_pressure_stages_suffix->sizePolicy().hasHeightForWidth());
         label_pressure_stages_suffix->setSizePolicy(sizePolicy);
@@ -464,12 +466,12 @@ public:
         horizontalLayout_9 = new QHBoxLayout();
         horizontalLayout_9->setSpacing(6);
         horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
-        label_usable_stages = new QLabel(frame_stages);
+        label_usable_stages = new QLabel(widget);
         label_usable_stages->setObjectName(QStringLiteral("label_usable_stages"));
 
         horizontalLayout_9->addWidget(label_usable_stages);
 
-        input_usable_stages = new QSpinBox(frame_stages);
+        input_usable_stages = new QSpinBox(widget);
         input_usable_stages->setObjectName(QStringLiteral("input_usable_stages"));
         sizePolicy.setHeightForWidth(input_usable_stages->sizePolicy().hasHeightForWidth());
         input_usable_stages->setSizePolicy(sizePolicy);
@@ -480,7 +482,7 @@ public:
 
         horizontalLayout_9->addWidget(input_usable_stages);
 
-        label_usable_stages_suffix = new QLabel(frame_stages);
+        label_usable_stages_suffix = new QLabel(widget);
         label_usable_stages_suffix->setObjectName(QStringLiteral("label_usable_stages_suffix"));
         sizePolicy.setHeightForWidth(label_usable_stages_suffix->sizePolicy().hasHeightForWidth());
         label_usable_stages_suffix->setSizePolicy(sizePolicy);
@@ -495,12 +497,12 @@ public:
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setSpacing(6);
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
-        label_amount_stages = new QLabel(frame_stages);
+        label_amount_stages = new QLabel(widget);
         label_amount_stages->setObjectName(QStringLiteral("label_amount_stages"));
 
         horizontalLayout_8->addWidget(label_amount_stages);
 
-        input_amount_stages = new QSpinBox(frame_stages);
+        input_amount_stages = new QSpinBox(widget);
         input_amount_stages->setObjectName(QStringLiteral("input_amount_stages"));
         sizePolicy.setHeightForWidth(input_amount_stages->sizePolicy().hasHeightForWidth());
         input_amount_stages->setSizePolicy(sizePolicy);
@@ -509,7 +511,7 @@ public:
 
         horizontalLayout_8->addWidget(input_amount_stages);
 
-        label_amount_stages_suffix = new QLabel(frame_stages);
+        label_amount_stages_suffix = new QLabel(widget);
         label_amount_stages_suffix->setObjectName(QStringLiteral("label_amount_stages_suffix"));
         sizePolicy.setHeightForWidth(label_amount_stages_suffix->sizePolicy().hasHeightForWidth());
         label_amount_stages_suffix->setSizePolicy(sizePolicy);
@@ -520,9 +522,6 @@ public:
 
 
         verticalLayout_3->addLayout(horizontalLayout_8);
-
-
-        gridLayout_3->addLayout(verticalLayout_3, 0, 0, 1, 1);
 
         frame_diveDetails = new QFrame(tab_properties);
         frame_diveDetails->setObjectName(QStringLiteral("frame_diveDetails"));
@@ -583,6 +582,8 @@ public:
 
         input_dpv_in_type = new QComboBox(frame_diveDetails);
         input_dpv_in_type->setObjectName(QStringLiteral("input_dpv_in_type"));
+        input_dpv_in_type->setMinimumSize(QSize(100, 0));
+        input_dpv_in_type->setMaximumSize(QSize(120, 16777215));
 
         horizontalLayout_38->addWidget(input_dpv_in_type);
 
@@ -1256,16 +1257,16 @@ public:
         tab_about->setObjectName(QStringLiteral("tab_about"));
         text_disclaimer = new QTextBrowser(tab_about);
         text_disclaimer->setObjectName(QStringLiteral("text_disclaimer"));
-        text_disclaimer->setGeometry(QRect(10, 350, 671, 111));
+        text_disclaimer->setGeometry(QRect(10, 200, 671, 261));
         frame_2 = new QFrame(tab_about);
         frame_2->setObjectName(QStringLiteral("frame_2"));
-        frame_2->setGeometry(QRect(10, 10, 321, 321));
+        frame_2->setGeometry(QRect(10, 10, 321, 161));
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
-        widget1 = new QWidget(frame_2);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(10, 10, 291, 132));
-        verticalLayout_4 = new QVBoxLayout(widget1);
+        layoutWidget_5 = new QWidget(frame_2);
+        layoutWidget_5->setObjectName(QStringLiteral("layoutWidget_5"));
+        layoutWidget_5->setGeometry(QRect(10, 10, 291, 132));
+        verticalLayout_4 = new QVBoxLayout(layoutWidget_5);
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
@@ -1273,21 +1274,21 @@ public:
         horizontalLayout_30 = new QHBoxLayout();
         horizontalLayout_30->setSpacing(6);
         horizontalLayout_30->setObjectName(QStringLiteral("horizontalLayout_30"));
-        label_4 = new QLabel(widget1);
+        label_4 = new QLabel(layoutWidget_5);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setMinimumSize(QSize(100, 0));
         label_4->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_30->addWidget(label_4);
 
-        label_10 = new QLabel(widget1);
+        label_10 = new QLabel(layoutWidget_5);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setMinimumSize(QSize(30, 0));
         label_10->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_30->addWidget(label_10);
 
-        label_16 = new QLabel(widget1);
+        label_16 = new QLabel(layoutWidget_5);
         label_16->setObjectName(QStringLiteral("label_16"));
         label_16->setMinimumSize(QSize(100, 0));
         label_16->setMaximumSize(QSize(1000009, 16777215));
@@ -1302,21 +1303,21 @@ public:
         horizontalLayout_31 = new QHBoxLayout();
         horizontalLayout_31->setSpacing(6);
         horizontalLayout_31->setObjectName(QStringLiteral("horizontalLayout_31"));
-        label_5 = new QLabel(widget1);
+        label_5 = new QLabel(layoutWidget_5);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setMinimumSize(QSize(100, 0));
         label_5->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_31->addWidget(label_5);
 
-        label_12 = new QLabel(widget1);
+        label_12 = new QLabel(layoutWidget_5);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setMinimumSize(QSize(30, 0));
         label_12->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_31->addWidget(label_12);
 
-        label_17 = new QLabel(widget1);
+        label_17 = new QLabel(layoutWidget_5);
         label_17->setObjectName(QStringLiteral("label_17"));
         label_17->setMinimumSize(QSize(100, 0));
         label_17->setMaximumSize(QSize(1000009, 16777215));
@@ -1331,21 +1332,21 @@ public:
         horizontalLayout_32 = new QHBoxLayout();
         horizontalLayout_32->setSpacing(6);
         horizontalLayout_32->setObjectName(QStringLiteral("horizontalLayout_32"));
-        label_6 = new QLabel(widget1);
+        label_6 = new QLabel(layoutWidget_5);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setMinimumSize(QSize(100, 0));
         label_6->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_32->addWidget(label_6);
 
-        label_13 = new QLabel(widget1);
+        label_13 = new QLabel(layoutWidget_5);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setMinimumSize(QSize(30, 0));
         label_13->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_32->addWidget(label_13);
 
-        label_18 = new QLabel(widget1);
+        label_18 = new QLabel(layoutWidget_5);
         label_18->setObjectName(QStringLiteral("label_18"));
         label_18->setMinimumSize(QSize(100, 0));
         label_18->setMaximumSize(QSize(1000009, 16777215));
@@ -1361,21 +1362,21 @@ public:
         horizontalLayout_33 = new QHBoxLayout();
         horizontalLayout_33->setSpacing(6);
         horizontalLayout_33->setObjectName(QStringLiteral("horizontalLayout_33"));
-        label_7 = new QLabel(widget1);
+        label_7 = new QLabel(layoutWidget_5);
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setMinimumSize(QSize(100, 0));
         label_7->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_33->addWidget(label_7);
 
-        label_14 = new QLabel(widget1);
+        label_14 = new QLabel(layoutWidget_5);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setMinimumSize(QSize(30, 0));
         label_14->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_33->addWidget(label_14);
 
-        label_19 = new QLabel(widget1);
+        label_19 = new QLabel(layoutWidget_5);
         label_19->setObjectName(QStringLiteral("label_19"));
         label_19->setMinimumSize(QSize(100, 0));
         label_19->setMaximumSize(QSize(1000009, 16777215));
@@ -1390,21 +1391,21 @@ public:
         horizontalLayout_34 = new QHBoxLayout();
         horizontalLayout_34->setSpacing(6);
         horizontalLayout_34->setObjectName(QStringLiteral("horizontalLayout_34"));
-        label_8 = new QLabel(widget1);
+        label_8 = new QLabel(layoutWidget_5);
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setMinimumSize(QSize(100, 0));
         label_8->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_34->addWidget(label_8);
 
-        label_15 = new QLabel(widget1);
+        label_15 = new QLabel(layoutWidget_5);
         label_15->setObjectName(QStringLiteral("label_15"));
         label_15->setMinimumSize(QSize(30, 0));
         label_15->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_34->addWidget(label_15);
 
-        label_20 = new QLabel(widget1);
+        label_20 = new QLabel(layoutWidget_5);
         label_20->setObjectName(QStringLiteral("label_20"));
         label_20->setMinimumSize(QSize(100, 0));
         label_20->setMaximumSize(QSize(1000009, 16777215));
@@ -1418,13 +1419,13 @@ public:
 
         frame_3 = new QFrame(tab_about);
         frame_3->setObjectName(QStringLiteral("frame_3"));
-        frame_3->setGeometry(QRect(350, 10, 331, 321));
+        frame_3->setGeometry(QRect(350, 10, 331, 161));
         frame_3->setFrameShape(QFrame::StyledPanel);
         frame_3->setFrameShadow(QFrame::Raised);
-        layoutWidget = new QWidget(frame_3);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(20, 10, 291, 132));
-        verticalLayout_8 = new QVBoxLayout(layoutWidget);
+        layoutWidget_51 = new QWidget(frame_3);
+        layoutWidget_51->setObjectName(QStringLiteral("layoutWidget_51"));
+        layoutWidget_51->setGeometry(QRect(20, 10, 291, 132));
+        verticalLayout_8 = new QVBoxLayout(layoutWidget_51);
         verticalLayout_8->setSpacing(6);
         verticalLayout_8->setContentsMargins(11, 11, 11, 11);
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
@@ -1432,21 +1433,21 @@ public:
         horizontalLayout_35 = new QHBoxLayout();
         horizontalLayout_35->setSpacing(6);
         horizontalLayout_35->setObjectName(QStringLiteral("horizontalLayout_35"));
-        label_11 = new QLabel(layoutWidget);
+        label_11 = new QLabel(layoutWidget_51);
         label_11->setObjectName(QStringLiteral("label_11"));
         label_11->setMinimumSize(QSize(100, 0));
         label_11->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_35->addWidget(label_11);
 
-        label_21 = new QLabel(layoutWidget);
+        label_21 = new QLabel(layoutWidget_51);
         label_21->setObjectName(QStringLiteral("label_21"));
         label_21->setMinimumSize(QSize(30, 0));
         label_21->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_35->addWidget(label_21);
 
-        label_22 = new QLabel(layoutWidget);
+        label_22 = new QLabel(layoutWidget_51);
         label_22->setObjectName(QStringLiteral("label_22"));
         label_22->setMinimumSize(QSize(100, 0));
         label_22->setMaximumSize(QSize(1000009, 16777215));
@@ -1461,21 +1462,21 @@ public:
         horizontalLayout_36 = new QHBoxLayout();
         horizontalLayout_36->setSpacing(6);
         horizontalLayout_36->setObjectName(QStringLiteral("horizontalLayout_36"));
-        label_23 = new QLabel(layoutWidget);
+        label_23 = new QLabel(layoutWidget_51);
         label_23->setObjectName(QStringLiteral("label_23"));
         label_23->setMinimumSize(QSize(100, 0));
         label_23->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_36->addWidget(label_23);
 
-        label_24 = new QLabel(layoutWidget);
+        label_24 = new QLabel(layoutWidget_51);
         label_24->setObjectName(QStringLiteral("label_24"));
         label_24->setMinimumSize(QSize(30, 0));
         label_24->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_36->addWidget(label_24);
 
-        label_25 = new QLabel(layoutWidget);
+        label_25 = new QLabel(layoutWidget_51);
         label_25->setObjectName(QStringLiteral("label_25"));
         label_25->setMinimumSize(QSize(100, 0));
         label_25->setMaximumSize(QSize(1000009, 16777215));
@@ -1490,21 +1491,21 @@ public:
         horizontalLayout_37 = new QHBoxLayout();
         horizontalLayout_37->setSpacing(6);
         horizontalLayout_37->setObjectName(QStringLiteral("horizontalLayout_37"));
-        label_26 = new QLabel(layoutWidget);
+        label_26 = new QLabel(layoutWidget_51);
         label_26->setObjectName(QStringLiteral("label_26"));
         label_26->setMinimumSize(QSize(100, 0));
         label_26->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_37->addWidget(label_26);
 
-        label_27 = new QLabel(layoutWidget);
+        label_27 = new QLabel(layoutWidget_51);
         label_27->setObjectName(QStringLiteral("label_27"));
         label_27->setMinimumSize(QSize(30, 0));
         label_27->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_37->addWidget(label_27);
 
-        label_28 = new QLabel(layoutWidget);
+        label_28 = new QLabel(layoutWidget_51);
         label_28->setObjectName(QStringLiteral("label_28"));
         label_28->setMinimumSize(QSize(100, 0));
         label_28->setMaximumSize(QSize(1000009, 16777215));
@@ -1520,21 +1521,21 @@ public:
         horizontalLayout_39 = new QHBoxLayout();
         horizontalLayout_39->setSpacing(6);
         horizontalLayout_39->setObjectName(QStringLiteral("horizontalLayout_39"));
-        label_32 = new QLabel(layoutWidget);
+        label_32 = new QLabel(layoutWidget_51);
         label_32->setObjectName(QStringLiteral("label_32"));
         label_32->setMinimumSize(QSize(100, 0));
         label_32->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout_39->addWidget(label_32);
 
-        label_33 = new QLabel(layoutWidget);
+        label_33 = new QLabel(layoutWidget_51);
         label_33->setObjectName(QStringLiteral("label_33"));
         label_33->setMinimumSize(QSize(30, 0));
         label_33->setMaximumSize(QSize(30, 16777215));
 
         horizontalLayout_39->addWidget(label_33);
 
-        label_34 = new QLabel(layoutWidget);
+        label_34 = new QLabel(layoutWidget_51);
         label_34->setObjectName(QStringLiteral("label_34"));
         label_34->setMinimumSize(QSize(100, 0));
         label_34->setMaximumSize(QSize(1000009, 16777215));
@@ -1579,7 +1580,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1587,7 +1588,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "GUE Dive planner", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "DPV diveplanner", Q_NULLPTR));
         label_gasSupply->setText(QApplication::translate("MainWindow", "Gas supply", Q_NULLPTR));
         label_9->setText(QApplication::translate("MainWindow", "Doubles", Q_NULLPTR));
         label_cylindersize_doubles->setText(QApplication::translate("MainWindow", "Cylinder size", Q_NULLPTR));
@@ -1611,7 +1612,7 @@ public:
         label_dpv_in_type->setText(QApplication::translate("MainWindow", "DPV calculated in ", Q_NULLPTR));
         input_dpv_in_type->clear();
         input_dpv_in_type->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "Mintues", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "Minutes", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Meters", Q_NULLPTR)
         );
         label_dpv_triggertime->setText(QApplication::translate("MainWindow", "DPV trigger time going IN", Q_NULLPTR));
@@ -1676,6 +1677,11 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; font-weight:600;\">Share:</span></p>\n"
+"<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This application is open-source, this means you are free too share this program with your divebuddy's.</p>\n"
+"<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Want to see new features added?, donate me some pizza money so I can invest more time!</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-t"
+                        "op:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; font-weight:600;\">Disclaimer:</span></p>\n"
 "<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This application does not in any way replace your own critical thinking and manual calculations. Author(s), GUE and ZeroGravity can not be held responsible for any incidents/accidents as a result of diving the suggested diveplan by this application.</p></body></html>", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow", "Author", Q_NULLPTR));
@@ -1699,10 +1705,10 @@ public:
         label_23->setText(QApplication::translate("MainWindow", "Changeslist", Q_NULLPTR));
         label_24->setText(QApplication::translate("MainWindow", ":", Q_NULLPTR));
         label_25->setText(QApplication::translate("MainWindow", "--", Q_NULLPTR));
-        label_26->setText(QApplication::translate("MainWindow", "Github", Q_NULLPTR));
+        label_26->setText(QApplication::translate("MainWindow", "Source code", Q_NULLPTR));
         label_27->setText(QApplication::translate("MainWindow", ":", Q_NULLPTR));
-        label_28->setText(QApplication::translate("MainWindow", "--", Q_NULLPTR));
-        label_32->setText(QApplication::translate("MainWindow", "Donote pizza", Q_NULLPTR));
+        label_28->setText(QApplication::translate("MainWindow", "<a href=\"https://github.com/FlipVernooij/DPV_diveplanner\">Github</a>", Q_NULLPTR));
+        label_32->setText(QApplication::translate("MainWindow", "Donate pizza", Q_NULLPTR));
         label_33->setText(QApplication::translate("MainWindow", ":", Q_NULLPTR));
         label_34->setText(QApplication::translate("MainWindow", "<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=LPPALYYJJ2FMC&lc=NL&item_name=Diveplanner%20pizza%20donation&item_number=DiveplannerDonation&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted\">Paypal</a>", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_about), QApplication::translate("MainWindow", "About", Q_NULLPTR));

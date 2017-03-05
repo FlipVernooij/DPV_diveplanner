@@ -30,11 +30,14 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>GUE Dive planner</string>
+   <string>DPV diveplanner</string>
   </property>
   <property name="windowIcon">
    <iconset resource="main_resource.qrc">
     <normaloff>:/icons/gue_logo.png</normaloff>:/icons/gue_logo.png</iconset>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTabWidget" name="tabWidget">
@@ -59,7 +62,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab_properties">
      <attribute name="title">
@@ -69,9 +72,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>240</y>
+        <y>210</y>
         <width>681</width>
-        <height>231</height>
+        <height>261</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -105,7 +108,7 @@
          <x>10</x>
          <y>30</y>
          <width>321</width>
-         <height>181</height>
+         <height>211</height>
         </rect>
        </property>
        <property name="frameShape">
@@ -114,7 +117,15 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget_7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>301</width>
+          <height>124</height>
+         </rect>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
           <widget class="QLabel" name="label_9">
@@ -336,7 +347,7 @@
          <x>350</x>
          <y>30</y>
          <width>321</width>
-         <height>186</height>
+         <height>211</height>
         </rect>
        </property>
        <property name="frameShape">
@@ -345,281 +356,279 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_3">
-          <item>
-           <widget class="QLabel" name="label_header_stages">
-            <property name="font">
-             <font>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Stages</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <widget class="QLabel" name="label_cylindersize_stages">
-              <property name="text">
-               <string>Cylinder size</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="input_cylindersize_stages">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>56</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>56</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="minimum">
-               <number>10</number>
-              </property>
-              <property name="maximum">
-               <number>18</number>
-              </property>
-              <property name="value">
-               <number>11</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_cylindersize_stages_suffix">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>liter</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
-            <item>
-             <widget class="QLabel" name="label_pressure_stages">
-              <property name="text">
-               <string>Fill pressure</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="input_pressure_stages">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>56</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>56</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="minimum">
-               <number>120</number>
-              </property>
-              <property name="maximum">
-               <number>240</number>
-              </property>
-              <property name="value">
-               <number>200</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_pressure_stages_suffix">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>bar</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_9">
-            <item>
-             <widget class="QLabel" name="label_usable_stages">
-              <property name="text">
-               <string>Usable gas on the way IN</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="input_usable_stages">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>56</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>56</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="maximum">
-               <number>240</number>
-              </property>
-              <property name="value">
-               <number>90</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_usable_stages_suffix">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>bar</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_8">
-            <item>
-             <widget class="QLabel" name="label_amount_stages">
-              <property name="text">
-               <string>Amount</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="input_amount_stages">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>56</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>56</width>
-                <height>16777215</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_amount_stages_suffix">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>50</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
+       <widget class="QWidget" name="">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_header_stages">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Stages</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_cylindersize_stages">
+             <property name="text">
+              <string>Cylinder size</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="input_cylindersize_stages">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>56</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>56</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <number>10</number>
+             </property>
+             <property name="maximum">
+              <number>18</number>
+             </property>
+             <property name="value">
+              <number>11</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_cylindersize_stages_suffix">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>liter</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_pressure_stages">
+             <property name="text">
+              <string>Fill pressure</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="input_pressure_stages">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>56</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>56</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <number>120</number>
+             </property>
+             <property name="maximum">
+              <number>240</number>
+             </property>
+             <property name="value">
+              <number>200</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_pressure_stages_suffix">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>bar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_usable_stages">
+             <property name="text">
+              <string>Usable gas on the way IN</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="input_usable_stages">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>56</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>56</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="maximum">
+              <number>240</number>
+             </property>
+             <property name="value">
+              <number>90</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_usable_stages_suffix">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>bar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_amount_stages">
+             <property name="text">
+              <string>Amount</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="input_amount_stages">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>56</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>56</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_amount_stages_suffix">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
      <widget class="QFrame" name="frame_diveDetails">
@@ -728,9 +737,21 @@
            </item>
            <item>
             <widget class="QComboBox" name="input_dpv_in_type">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
              <item>
               <property name="text">
-               <string>Mintues</string>
+               <string>Minutes</string>
               </property>
              </item>
              <item>
@@ -1970,9 +1991,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>350</y>
+        <y>200</y>
         <width>671</width>
-        <height>111</height>
+        <height>261</height>
        </rect>
       </property>
       <property name="html">
@@ -1980,6 +2001,10 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Share:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This application is open-source, this means you are free too share this program with your divebuddy's.&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Want to see new features added?, donate me some pizza money so I can invest more time!&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Disclaimer:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This application does not in any way replace your own critical thinking and manual calculations. Author(s), GUE and ZeroGravity can not be held responsible for any incidents/accidents as a result of diving the suggested diveplan by this application.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
@@ -1990,7 +2015,7 @@ p, li { white-space: pre-wrap; }
         <x>10</x>
         <y>10</y>
         <width>321</width>
-        <height>321</height>
+        <height>161</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -1999,7 +2024,7 @@ p, li { white-space: pre-wrap; }
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget_5">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2356,7 +2381,7 @@ p, li { white-space: pre-wrap; }
         <x>350</x>
         <y>10</y>
         <width>331</width>
-        <height>321</height>
+        <height>161</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -2365,7 +2390,7 @@ p, li { white-space: pre-wrap; }
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QWidget" name="layoutWidget">
+      <widget class="QWidget" name="layoutWidget_51">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -2526,7 +2551,7 @@ p, li { white-space: pre-wrap; }
              </size>
             </property>
             <property name="text">
-             <string>Github</string>
+             <string>Source code</string>
             </property>
            </widget>
           </item>
@@ -2567,7 +2592,7 @@ p, li { white-space: pre-wrap; }
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="text">
-             <string>--</string>
+             <string>&lt;a href=&quot;https://github.com/FlipVernooij/DPV_diveplanner&quot;&gt;Github&lt;/a&gt;</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2596,7 +2621,7 @@ p, li { white-space: pre-wrap; }
              </size>
             </property>
             <property name="text">
-             <string>Donote pizza</string>
+             <string>Donate pizza</string>
             </property>
            </widget>
           </item>
