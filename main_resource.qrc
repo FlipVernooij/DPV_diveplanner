@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file>zero_gravity_logo.png</file>
+    <file>gue_logo.png</file>
+  </qresource>
+</RCC>
