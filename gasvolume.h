@@ -1,4 +1,4 @@
-#ifndef GASVOLUME_H
+﻿#ifndef GASVOLUME_H
 #define GASVOLUME_H
 
 
@@ -49,9 +49,11 @@ class GasVolume
     
         static  int minute_2_liters( int minutes,  int avg_depth,  int scr);
 
+        static int meters_2_minutes( int meters, int speed);
+
         static  int liters_2_meters( int liters,  int avg_depth,  int scr, int speed);
 
-        static  int meters_2_liters( int liters,  int avg_depth,  int scr, int speed);
+        static  int meters_2_liters( int meters,  int avg_depth,  int scr, int speed);
 };
 
 #endif // GASVOLUME_H

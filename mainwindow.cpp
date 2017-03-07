@@ -52,7 +52,13 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
 
         // Dive details
         int avg_depth = ui->input_avg_depth->value();
-        int dpv_trigger_in = ui->input_dpv_triggertime->value();
+
+        const int DPV_CALCULATION_IN_TRIGGERTIME = 0;
+        const int DPV_CALCULATION_IN_DISTANCE = 1;
+
+        int dpv_calculation_type = ui->input_dpv_in_type->currentIndex();
+        int dpv_trigger_in =  0;
+        int dpv_penetration_meters = 0;
 
         // Doubles
         int doubles_cylindersize = ui->input_cylindersize_doubles->value();
@@ -75,6 +81,7 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
         for(int i=0; i<stages_amount; i++){
             supply.add_stage(stages_cylindersize, stages_bars, stages_penetration_bars);
         }
+
         int liters_stages = supply.get_liters_in_stages();
         int liters_doubles = supply.get_liters_in_doubles();
         int liters_total = supply.get_total_liters();
@@ -86,7 +93,6 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
 
         int total_dive_time = 0;
         int dpv_total_trigger_time = 0;
-        int dpv_penetration_meters = 0;
         int swim_total_time = 0;
         int swim_penetration_meters = 0;
         int total_penetration_meters = 0;
@@ -106,24 +112,41 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
         int stress_dpv_bars = 0;
 
         int tmp_int = 0;
+
+        if(dpv_calculation_type == DPV_CALCULATION_IN_TRIGGERTIME){
+            dpv_trigger_in = ui->input_dpv_triggertime->value();
+            dpv_penetration_meters = dpv_trigger_in * speed_dpv;
+        }else{
+            dpv_penetration_meters = ui->input_dpv_triggerdistance->value();
+            dpv_trigger_in = dpv_penetration_meters / speed_dpv;
+        }
         // Check dpv trigger time (80% of total burntime / 3)
         // so total_burntime = 200, then 160/3 = 50 minutes in.
         int dpv_max_in = static_cast<int>(floor(dpv_total_burntime*0.08/3)*10);
+
         if(dpv_trigger_in > dpv_max_in){
             dpv_trigger_in = dpv_max_in;
             warnings.push_back("Dpv triggertime can not be bigger that 3/2 of 80% or total burntime.");
         }
 
         // Dpv dive time/disctance and gas.
-        if(dpv_trigger_in > 0){
+        if(dpv_trigger_in+dpv_penetration_meters > 0){
             tmp_int = GasVolume::minute_2_liters(dpv_trigger_in, avg_depth, scr_dpv);
             if(tmp_int > current_penetration_liters){
                tmp_int = current_penetration_liters;
                dpv_trigger_in = GasVolume::liters_2_minutes(tmp_int, avg_depth, scr_dpv);
+               dpv_penetration_meters = GasVolume::liters_2_meters(tmp_int, avg_depth, scr_dpv, speed_dpv);
                warnings.push_back("Dpv triggertime in is bigger than estimated gas consumtion.");
+            }else{
+                if(dpv_calculation_type == DPV_CALCULATION_IN_TRIGGERTIME){
+                    dpv_penetration_meters = GasVolume::liters_2_meters(tmp_int, avg_depth, scr_dpv, speed_dpv);
+                }else{
+                    dpv_trigger_in = GasVolume::meters_2_liters(dpv_penetration_meters, avg_depth, scr_dpv, speed_dpv);
+                }
             }
             dpv_total_trigger_time = dpv_trigger_in * 2;
-            dpv_penetration_meters = GasVolume::liters_2_meters(tmp_int, avg_depth, scr_dpv, speed_dpv);
+
+
             current_penetration_liters -= tmp_int;
             tmp_int = 0;
 

@@ -95,7 +95,11 @@ int GasVolume::liters_2_meters( int liters,  int avg_depth,  int scr, int speed)
     return GasVolume::liters_2_minutes(liters,  avg_depth,  scr) * speed;
 }
 
+int GasVolume::meters_2_minutes( int meters, int speed){
+    return static_cast<int>(ceil(meters / speed));
+}
+
+
 int GasVolume::meters_2_liters( int meters,  int avg_depth,  int scr, int speed){
-    int minutes = static_cast<int>(ceil(meters / speed));
-    return GasVolume::minute_2_liters(minutes, avg_depth, scr);
+    return GasVolume::minute_2_liters(GasVolume::meters_2_minutes(meters, speed), avg_depth, scr);
 }

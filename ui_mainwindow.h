@@ -1257,7 +1257,7 @@ public:
         tab_about->setObjectName(QStringLiteral("tab_about"));
         text_disclaimer = new QTextBrowser(tab_about);
         text_disclaimer->setObjectName(QStringLiteral("text_disclaimer"));
-        text_disclaimer->setGeometry(QRect(10, 200, 671, 261));
+        text_disclaimer->setGeometry(QRect(10, 350, 671, 111));
         frame_2 = new QFrame(tab_about);
         frame_2->setObjectName(QStringLiteral("frame_2"));
         frame_2->setGeometry(QRect(10, 10, 321, 161));
@@ -1580,7 +1580,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1677,11 +1677,6 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; font-weight:600;\">Share:</span></p>\n"
-"<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This application is open-source, this means you are free too share this program with your divebuddy's.</p>\n"
-"<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Want to see new features added?, donate me some pizza money so I can invest more time!</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-t"
-                        "op:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; font-weight:600;\">Disclaimer:</span></p>\n"
 "<p style=\" margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This application does not in any way replace your own critical thinking and manual calculations. Author(s), GUE and ZeroGravity can not be held responsible for any incidents/accidents as a result of diving the suggested diveplan by this application.</p></body></html>", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow", "Author", Q_NULLPTR));
@@ -1708,7 +1703,7 @@ public:
         label_26->setText(QApplication::translate("MainWindow", "Source code", Q_NULLPTR));
         label_27->setText(QApplication::translate("MainWindow", ":", Q_NULLPTR));
         label_28->setText(QApplication::translate("MainWindow", "<a href=\"https://github.com/FlipVernooij/DPV_diveplanner\">Github</a>", Q_NULLPTR));
-        label_32->setText(QApplication::translate("MainWindow", "Donate pizza", Q_NULLPTR));
+        label_32->setText(QApplication::translate("MainWindow", "Donate", Q_NULLPTR));
         label_33->setText(QApplication::translate("MainWindow", ":", Q_NULLPTR));
         label_34->setText(QApplication::translate("MainWindow", "<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=LPPALYYJJ2FMC&lc=NL&item_name=Diveplanner%20pizza%20donation&item_number=DiveplannerDonation&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted\">Paypal</a>", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_about), QApplication::translate("MainWindow", "About", Q_NULLPTR));

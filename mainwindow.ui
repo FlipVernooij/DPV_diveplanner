@@ -62,7 +62,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_properties">
      <attribute name="title">
@@ -356,7 +356,15 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>282</width>
+          <height>160</height>
+         </rect>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
           <widget class="QLabel" name="label_header_stages">
@@ -1991,9 +1999,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>200</y>
+        <y>350</y>
         <width>671</width>
-        <height>261</height>
+        <height>111</height>
        </rect>
       </property>
       <property name="html">
@@ -2001,10 +2009,6 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Share:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This application is open-source, this means you are free too share this program with your divebuddy's.&lt;/p&gt;
-&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Want to see new features added?, donate me some pizza money so I can invest more time!&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Disclaimer:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This application does not in any way replace your own critical thinking and manual calculations. Author(s), GUE and ZeroGravity can not be held responsible for any incidents/accidents as a result of diving the suggested diveplan by this application.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
@@ -2621,7 +2625,7 @@ p, li { white-space: pre-wrap; }
              </size>
             </property>
             <property name="text">
-             <string>Donate pizza</string>
+             <string>Donate</string>
             </property>
            </widget>
           </item>
